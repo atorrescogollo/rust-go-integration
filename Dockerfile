@@ -11,7 +11,7 @@ RUN rustc -g -O --crate-type staticlib src/lib.rs -o lib.a \
     && cbindgen --crate rust --output src/lib.h --lang c
 
 
-FROM golang:1.19-alpine AS golangBuilder
+FROM golang:1.22-alpine AS golangBuilder
 
 RUN apk add build-base
 COPY --from=rustBuilder /w /w
