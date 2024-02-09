@@ -1,4 +1,4 @@
-FROM rust:1.65-alpine AS rustBuilder
+FROM rust:1.76-alpine AS rustBuilder
 
 COPY . /w
 WORKDIR /w/rustlib
